@@ -69,7 +69,7 @@ class Twitter {
 
                 const oauth_request_return_url = await new Promise((res, rej) => {
                     const url_listener = (event) => {
-                        const url_test = new RegExp(`^${this.props.redirectUri}`);
+                        const url_test = new RegExp(`^${this.props.oauthCallback}`);
                         if (event.url && url_test.test(event.url)) {
                             Linking.removeEventListener('url', url_listener);
                             SafariView.removeEventListener(cancel_listener);
