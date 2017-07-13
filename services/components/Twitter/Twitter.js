@@ -146,7 +146,7 @@ class Twitter {
                     this._user_id = params.get('user_id');
                     this._verified = true;
 
-                    return this._verified;
+                    return {status: 'SUCCESS'};
                 }
             } catch(err) {
                 console.error(err);
